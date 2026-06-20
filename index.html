@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo e Preservação do Solo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Manejo e Preservação do Solo</h1>
+    <p>Educação Ambiental para o Ensino Médio</p>
+</header>
+
+<nav>
+    <a href="#conceito">O Solo</a>
+    <a href="#importancia">Importância</a>
+    <a href="#manejo">Manejo Sustentável</a>
+    <a href="#preservacao">Preservação</a>
+    <a href="#quiz">Quiz</a>
+</nav>
+
+<section id="conceito">
+    <div class="card">
+        <h2>O que é o Solo?</h2>
+        <p>
+            O solo é a camada superficial da Terra formada pela decomposição de rochas,
+            matéria orgânica, água, ar e organismos vivos. Ele é essencial para a produção
+            de alimentos, para a manutenção dos ecossistemas e para o equilíbrio ambiental.
+        </p>
+    </div>
+</section>
+
+<section id="importancia">
+    <div class="card">
+        <h2>Importância do Solo</h2>
+        <ul>
+            <li>Produção de alimentos.</li>
+            <li>Armazenamento de água.</li>
+            <li>Habitat de diversos organismos.</li>
+            <li>Ciclagem de nutrientes.</li>
+            <li>Base para atividades humanas.</li>
+        </ul>
+
+        <div class="destaque">
+            <strong>Curiosidade:</strong> A formação de apenas 1 cm de solo fértil pode levar centenas de anos.
+        </div>
+    </div>
+</section>
+
+<section id="manejo">
+    <div class="card">
+        <h2>Manejo Sustentável do Solo</h2>
+        <ul>
+            <li><strong>Rotação de culturas:</strong> alternar espécies cultivadas.</li>
+            <li><strong>Plantio direto:</strong> reduz a erosão e conserva a umidade.</li>
+            <li><strong>Adubação orgânica:</strong> melhora a fertilidade natural.</li>
+            <li><strong>Terraceamento:</strong> diminui o escoamento da água.</li>
+            <li><strong>Cobertura vegetal:</strong> protege o solo da erosão.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="preservacao">
+    <div class="card">
+        <h2>Como Preservar o Solo?</h2>
+
+        <ul>
+            <li>Evitar o desmatamento.</li>
+            <li>Reduzir o uso excessivo de agrotóxicos.</li>
+            <li>Recuperar áreas degradadas.</li>
+            <li>Proteger nascentes e matas ciliares.</li>
+            <li>Praticar agricultura sustentável.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="quiz">
+    <div class="quiz">
+        <h2>Quiz Rápido</h2>
+
+        <p><strong>Qual prática ajuda a reduzir a erosão do solo?</strong></p>
+
+        <input type="radio" name="pergunta" value="errado"> Queimada da vegetação<br>
+        <input type="radio" name="pergunta" value="certo"> Plantio direto<br>
+        <input type="radio" name="pergunta" value="errado"> Desmatamento<br>
+
+        <br>
+        <button onclick="verificarResposta()">Verificar Resposta</button>
+
+        <p id="resultado"></p>
+    </div>
+</section>
+
+<footer>
+    <p>Projeto Educacional - Manejo e Preservação do Solo | Ensino Médio</p>
+</footer>
+
+<script>
+function verificarResposta() {
+    const resposta = document.querySelector('input[name="pergunta"]:checked');
+    const resultado = document.getElementById("resultado");
+
+    if (!resposta) {
+        resultado.innerHTML = "Selecione uma alternativa.";
+        resultado.style.color = "orange";
+        return;
+    }
+
+    if (resposta.value === "certo") {
+        resultado.innerHTML = "✅ Correto! O plantio direto ajuda a reduzir a erosão.";
+        resultado.style.color = "green";
+    } else {
+        resultado.innerHTML = "❌ Incorreto. Tente novamente.";
+        resultado.style.color = "red";
+    }
+}
+</script>
+
+</body>
+</html>
